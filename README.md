@@ -32,13 +32,13 @@ The goals/steps of this project are the following:
 
 
 ---
-##Writeup / README
+## Writeup / README
 
 You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Data analysis:
+#### 1. Data analysis:
 
 I used the pandas library to calculate summary statistics of the traffic signs dataset:
 
@@ -48,7 +48,7 @@ I used the pandas library to calculate summary statistics of the traffic signs d
 * The shape of a traffic sign image is 32x32x3
 * The number of unique classes/labels in the data set is 43
 
-####2. Exploratory visualization of the dataset:
+#### 2. Exploratory visualization of the dataset:
 
 Here is an exploratory visualization of the data set. First, I visualized all the classes of the German traffic signs by plotting a random
 image from the training set for each class with its label. The image below shows some
@@ -63,9 +63,9 @@ the training set:
 ![alt text][image3]
 
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Image processing:
+#### 1. Image processing:
 
 As a first step, I decided to apply a histogram equalization to the images to enhance
 the contrast.
@@ -78,21 +78,21 @@ the training.
 
 
 
-####2. Model architecture:
+#### 2. Model architecture:
 
 My final model consisted of the following layers (each convolution is followed by a RELU activation):
 
  ![alt text][image5]
 
 
-####3. Model training:
+#### 3. Model training:
 
 To train the model, I used an Adam Optimizer, with a learning rate equal to 0.001 on
 a batch of 128 samples and repeated the training for 15 epochs. 
 
 I also enhanced the performance by dividing the learning rate by 5 each time the accuracy decreased between two consecutive epochs. 
 
-####4. Description the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93:
+#### 4. Description the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93:
 
 My final model results were:
 * training set accuracy not computed
@@ -110,9 +110,9 @@ The most important design choice that enhanced the accuracy was the dropout, but
 can be enhanced more by also augmenting the data. 
  
 
-###Testing the Model on New Images
+### Testing the Model on New Images
 
-####1. Choosing five German traffic signs found on the web :
+#### 1. Choosing five German traffic signs found on the web :
 
 Here are five German traffic signs that I found on the web:
 
@@ -122,7 +122,7 @@ Here are five German traffic signs that I found on the web:
 I cropped the images, resized and preprocessed them in the same way I did for the
 training, validation and test sets.
 
-####2. Discussion of the model's predictions on these new traffic signs and comparison of the results to predicting on the test set:
+#### 2. Discussion of the model's predictions on these new traffic signs and comparison of the results to predicting on the test set:
 
 Here are the results of the prediction:
 
